@@ -1,0 +1,78 @@
+.App{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    padding: 2em;
+    font-size: 2.5em;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 0 5px 4px rgb(245, 245, 247);
+}
+
+.span-2{
+    grid-column: span 2;
+}
+.calculator-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 3rem);
+    background-color: rgb(255, 254, 255);
+    border-radius: 10px;
+    padding: .6rem;
+    box-shadow: 
+    0 0 0 10px rgb(134, 133, 133),
+    0 0 25px 20px black;
+}
+.calculator-grid > button{
+    font-size: 1rem;
+    background-color: rgb(236, 236, 236);
+    border: none;
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus{
+    font-size: 1rem;
+    outline: none;
+    background-color: rgb(255, 254, 255);
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(27, 59, 132, 0.623);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.4rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.previous-operand{
+    color: rgba(255, 255, 255, 0.562);
+    padding: 5px;
+    font-size: 1.5rem;
+}
+.current-operand{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+@media (max-width: 452px) {
+    .calculator-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 3.6rem);
+    }
+    .title{
+        padding: 1em;
+        font-size: 2.5em;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        text-shadow: 0 5px 4px rgb(245, 245, 247);
+    }
+}
